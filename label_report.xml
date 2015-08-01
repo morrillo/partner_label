@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>	
+		<report id="report_partner_label_action"
+			string="Partner Label"
+			model="res.partner"
+			report_type="qweb-pdf"
+			name="partner_label.report_partner_label_template"
+			/>
+
+		<!-- template id="report_partner_label_template" pageSize="(175.78,79.38)" leftMargin="0.0cm" rightMargin="0.0cm" topMargin="0.0cm" bottomMargin="0.0cm" -->
+		<template id="report_partner_label_template">
+			<t t-call="report.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="report.external_layout">
+						<div class="page">
+							<!-- Report page content -->
+							<p><span t-field="o.company_id.name" />, <span t-field="o.company_id.partner_id.street" />, <span t-field="o.company_id.partner_id.zip" />, <span t-field="o.company_id.partner_id.city" /></p>
+							<strong t-field="o.name" />
+							<p><span t-field="o.street" />, <span t-field="o.zip" />, <span t-field="o.city" /></p>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</openerp>
