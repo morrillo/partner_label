@@ -16,22 +16,28 @@
 						    <table class="table table-condensed">
 							<!-- Report page content -->
 							<thead>
-								<tr>
-								   <th><strong><span t-field="o.company_id.name" /></strong>
-								   <span t-field="o.company_id.partner_id.street" />, <span t-field="o.company_id.partner_id.zip" />, <span t-field="o.company_id.partner_id.city" />
-								   <span t-field="o.company_id.partner_id.phone"/>, <span t-field="o.company_id.partner_id.website" />, <span t-field="o.company_id.partner_id.email" /></th>
-								</tr>
+							     <tr><th>
+								<address>
+								  <strong>Envía</strong><br />
+								  <strong>Greenlite SRL</strong><br />
+								  Manuela Pedraza 2056 of 103<br />
+								  Capital Federal, CP 1431<br />
+								  <abbr title="TE:" /> (011) 5353.9426
+								</address>
+							     </th></tr>
 							</thead>
 							<tbody>
 							    <tr>
-								<td>
-								    <strong t-field="o.name" />
-									<span t-field="o.street" />, <span t-field="o.zip" />, <span t-field="o.city" />
-									<span t-field="o.company_id.partner_id.phone"/>, <span t-field="o.company_id.partner_id.website" />, <span t-field="o.company_id.partner_id.email" />
-								</td>
+								<address>
+								  <strong>Destinatario</strong><br />
+								  <strong><span t-field="o.name" /></strong><br />
+								  <span t-field="o.street" /><br />
+								  <span t-field="o.city" /><br />
+								  <abbr title="TE:" /><span t-field="o.phone" />
+								</address>
 							    </tr>
 							</tbody>
-						     </table>
+						    </table>
 						</div>
 					</t>
 				</t>
